@@ -136,10 +136,10 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                 
                 FIRDatabase.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (err, ref) in
                     if let err = err {
-                        print("Failed to save user info database:", err)
+                        print("Failed to save user info db:", err)
                         return
                     }
-                    print("Successfully saved user info to database")
+                    print("Successfully saved user info to db")
                     
                     guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
                     
