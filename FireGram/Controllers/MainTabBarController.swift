@@ -39,13 +39,13 @@ class MainTabBarController: UITabBarController {
         let layout = UICollectionViewFlowLayout()
         let userProfileController = UserProfileController(collectionViewLayout: layout)
         
-        let navController = UINavigationController(rootViewController: userProfileController)
-        navController.tabBarItem.image = #imageLiteral(resourceName: "profile_unselected")
-        navController.tabBarItem.selectedImage = #imageLiteral(resourceName: "profile_selected")
+        let userProfileNavController = UINavigationController(rootViewController: userProfileController)
+        userProfileNavController.tabBarItem.image = #imageLiteral(resourceName: "profile_unselected")
+        userProfileNavController.tabBarItem.selectedImage = #imageLiteral(resourceName: "profile_selected")
         
         tabBar.tintColor = .black
         
-        viewControllers = [homeNavController, searchNavController, plusNavController, likeNavController, userProfileController]
+        viewControllers = [homeNavController, searchNavController, plusNavController, likeNavController, userProfileNavController]
         
         // modify tab bar item insets
         guard let items = tabBar.items else { return }
