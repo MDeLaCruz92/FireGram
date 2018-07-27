@@ -43,20 +43,20 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     let emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Email"
-        tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
-        tf.font = UIFont.systemFont(ofSize: 14)
-        tf.borderStyle = .roundedRect
+        let textField = UITextField()
+        textField.placeholder = "Email"
+        textField.backgroundColor = UIColor(white: 0, alpha: 0.03)
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.borderStyle = .roundedRect
         
-        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
-        return tf
+        textField.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        return textField
     }()
     
     @objc func handleTextInputChange() {
-        let isFormValid = emailTextField.text?.characters.count ?? 0 > 0 &&
-            usernameTextField.text?.characters.count ?? 0 > 0 &&
-            passwordTextField.text?.characters.count ?? 0 > 0
+        let isFormValid = emailTextField.text?.isEmpty == false &&
+            usernameTextField.text?.isEmpty == false &&
+            passwordTextField.text?.isEmpty == false
         
         if isFormValid {
             signUpButton.isEnabled = true
@@ -68,13 +68,13 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     let usernameTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Username"
-        tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
-        tf.font = UIFont.systemFont(ofSize: 14)
-        tf.borderStyle = .roundedRect
-        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
-        return tf
+        let textField = UITextField()
+        textField.placeholder = "Username"
+        textField.backgroundColor = UIColor(white: 0, alpha: 0.03)
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.borderStyle = .roundedRect
+        textField.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        return textField
     }()
     
     let passwordTextField: UITextField = {
@@ -103,7 +103,7 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
     }()
     
     @objc func handleSignUp() {
-        guard let email = emailTextField.text, email.characters.count > 0 else { return }
+        guard let email = emailTextField.text, email.count > 0 else { return }
         guard let username = usernameTextField.text, username.count > 0 else { return }
         guard let password = passwordTextField.text, password.count > 0 else { return }
         
