@@ -27,7 +27,6 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
         if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
             plusPhotoButton.setImage(editedImage.withRenderingMode(.alwaysOriginal), for: .normal)
         } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
@@ -108,7 +107,7 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         guard let password = passwordTextField.text, password.count > 0 else { return }
         
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error: Error?) in
-            
+
             if let err = error {
                 print("Failed to create user:", err)
                 return

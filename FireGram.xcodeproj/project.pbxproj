@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82080664212DFF370088065D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82080663212DFF370088065D /* User.swift */; };
+		8208069F21475FD20088065D /* PhotoSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208069E21475FD10088065D /* PhotoSelectorCell.swift */; };
 		822DEB681F39425900832961 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DEB671F39425900832961 /* MainTabBarController.swift */; };
 		822DEB6A1F39439C00832961 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DEB691F39439C00832961 /* UserProfileController.swift */; };
 		825E2AE01F3F7955002C043D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825E2ADF1F3F7955002C043D /* LoginController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		0847FC11EC53F47D5EF2B8DD /* Pods-FireGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireGram.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireGram/Pods-FireGram.release.xcconfig"; sourceTree = "<group>"; };
 		466849D21C61199EBEA020DC /* Pods_FireGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82080663212DFF370088065D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8208069E21475FD10088065D /* PhotoSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorCell.swift; sourceTree = "<group>"; };
 		822DEB671F39425900832961 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		822DEB691F39439C00832961 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		825E2ADF1F3F7955002C043D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		822DEB651F391CB700832961 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				82080663212DFF370088065D /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				82A494FD1F85DAB6001020BF /* PhotoSelectorController.swift */,
+				8208069E21475FD10088065D /* PhotoSelectorCell.swift */,
 			);
 			path = AppendPhoto;
 			sourceTree = "<group>";
@@ -301,9 +307,11 @@
 				822DEB681F39425900832961 /* MainTabBarController.swift in Sources */,
 				82B717271F3AC044003FE722 /* UserProfileHeader.swift in Sources */,
 				822DEB6A1F39439C00832961 /* UserProfileController.swift in Sources */,
+				82080664212DFF370088065D /* User.swift in Sources */,
 				82F76BC41F2D69BF0076EB2D /* AppDelegate.swift in Sources */,
 				825E2AE01F3F7955002C043D /* LoginController.swift in Sources */,
 				82A494FE1F85DAB6001020BF /* PhotoSelectorController.swift in Sources */,
+				8208069F21475FD20088065D /* PhotoSelectorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

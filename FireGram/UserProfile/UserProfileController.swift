@@ -104,19 +104,8 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
             self.user = User(dictionary: dictionary)
             self.navigationItem.title = self.user?.username
             self.collectionView?.reloadData()
-            
         }) { (err) in
             print("Failed to fetch user:", err)
         }
-    }
-}
-
-struct User {
-    let username: String
-    let profileImageUrl: String
-    
-    init(dictionary: [String: Any]) {
-        self.username = dictionary["username"] as? String ?? ""
-        self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
     }
 }

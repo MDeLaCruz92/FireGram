@@ -50,6 +50,8 @@ class UserProfileHeader: UICollectionViewCell {
         return button
     }()
     
+    // MARK: Posts, Followers, Following UI
+    
     let postsLabel: UILabel = {
         let label = UILabel()
         
@@ -128,7 +130,6 @@ class UserProfileHeader: UICollectionViewCell {
     }
     
     fileprivate func setupBottomToolbar() {
-        
         let topDividerView = UIView()
         topDividerView.backgroundColor = UIColor.lightGray
         
@@ -153,7 +154,6 @@ class UserProfileHeader: UICollectionViewCell {
     
     fileprivate func setupProfileImage() {
         guard let profileImageUrl = user?.profileImageUrl else { return }
-        
         guard let url = URL(string: profileImageUrl) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
